@@ -6,6 +6,9 @@ backend/public/images/*
 backend/node_modules
 backend/config/config.env
 
+#backend files
+backend/.env
+
 #frontend files
 frontend/.env
 

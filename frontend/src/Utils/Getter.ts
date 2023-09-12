@@ -4,7 +4,7 @@ import axios from "axios";
 export const getMain = async () => {
   try {
     let data = await axios
-      .get(`http://localhost:8000/`)
+      .get(`http://localhost:8000/api`)
       .then((data) => data?.data || data)
       .catch((err) => {
         console.error(err.response?.data || err);
