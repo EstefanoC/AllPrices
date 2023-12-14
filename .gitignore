@@ -7,7 +7,7 @@ backend/node_modules
 backend/config/config.env
 
 #backend files
-backend/.env
+backend/config/.env
 
 #frontend files
 frontend/.env

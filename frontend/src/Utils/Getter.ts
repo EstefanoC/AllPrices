@@ -4,7 +4,7 @@ import axios from "axios";
 export const getMain = async () => {
   try {
     let data = await axios
-      .get(`http://localhost:8000/api`)
+      .get(`http://localhost:8000/v1/api/`)
       .then((data) => data?.data || data)
       .catch((err) => {
         console.error(err.response?.data || err);
@@ -13,6 +13,6 @@ export const getMain = async () => {
 
     console.log(data);
   } catch (error) {
-    console.error(error, "error in try and catch with axios get Beatmakers");
+    console.error(error, "error in try and catch with axios get API");
   }
 };

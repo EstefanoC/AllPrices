@@ -1,41 +1,44 @@
-from ast import List
+import asyncio
+
+from uuid import uuid4
+
+# Dependencies
 from typing import Union
+from fastapi import APIRouter, FastAPI, Response
 
-from fastapi import FastAPI, Response
-from pydantic import BaseModel
-from dotenv import load_dotenv
-import os
+# Models
+from models import Product, Categories
 
-load_dotenv()
+# config
+import config.database as DB
 
-secret_key = os.getenv('SECRET_KEY')
-
-print(secret_key)
-
-app = FastAPI()
+# Routers
+import routers
 
 
-class Product(BaseModel):
-    id: int
-    name: str
-    price: int
+router = APIRouter(prefix="/v1/api")
 
+# Create Table
+DB.create_table()
 
 list = [
-    Product(id=1, name="PS5 Console", price="499"),
-    Product(id=2, name="XBOX Series S", price="399")
+    Product(id=uuid4(), name="PS5 Console",
+            price="499", category=Categories.gaming),
+    Product(id=uuid4(), name="XBOX Series S",
+            price="399", category=Categories.gaming)
 ]
 
 
-@app.get("/api/")
-def read_root(response: Response):
+@router.get("/")
+async def read_root(response: Response):
     response.headers["Access-Control-Allow-Origin"] = "*"
-    return list
+    return DB.get_all_DB()
 
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Union[str, None] = None):
+@router.get("/item/{item_id}")
+def read_item(item_id: str, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
 
 
-print("data")
+app = FastAPI()
+app.include_router(router)

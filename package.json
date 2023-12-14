@@ -9,7 +9,7 @@
     "client:install": "cd frontend && npm install",
     "client:build": "cd frontend && npm build",
     "client": "cd frontend && npm run start",
-    "server": "cd backend && uvicorn main:app",
+    "server": "cd backend && uvicorn main:app --port 8005 --reload",
     "dev": "concurrently \"npm run client\" \"npm run server\""
   },
   "dependencies": {
