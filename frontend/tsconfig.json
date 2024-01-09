@@ -1,9 +1,11 @@
 {
   "compilerOptions": {
     "jsx": "react",
+    "target": "es6",
+    "baseUrl": "src",
     "esModuleInterop": true,
     "moduleResolution": "Node",
-    "target": "es6"
+    "typeRoots": ["node_modules/@types", "src/types"]
   },
   "include": ["src/**/*"]
   // "exclude": [
