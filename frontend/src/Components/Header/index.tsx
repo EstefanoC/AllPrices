@@ -7,7 +7,7 @@ const Logo = require("../../assets/images/logo.png");
 
 const Header = () => {
   return (
-    <header>
+    <header className="">
       {/* Logo */}
       <img src={Logo} alt="Logo of PriceAll" />
       Header
