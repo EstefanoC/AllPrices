@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -9,6 +12,7 @@ module.exports = {
         input: "0 0px 2px 0px #0000004a",
       },
       colors: {
+        background: "##f5f5f5",
         primary: "#fff",
         secondary: "#30ac68",
         text: "#141414",
@@ -18,6 +22,21 @@ module.exports = {
         banner: "url(./assets/images/Banner.jpg)",
       },
     },
+    textShadow: {
+      title: "0px 0px 5px #141414",
+      p: "1px 1px 1px #141414",
+    },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "text-shadow": (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme("textShadow") }
+      );
+    }),
+  ],
 };

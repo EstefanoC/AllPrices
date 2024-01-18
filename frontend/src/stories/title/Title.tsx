@@ -13,7 +13,7 @@ interface ButtonProps {
 export const Title = ({ primary = true, className = "", label, ...props }: ButtonProps) => {
   if (primary) {
     return (
-      <h1 className={`text-5xl font-bold text-text ${className}`} {...props}>
+      <h1 className={`text-7xl font-bold text-text ${className}`} {...props}>
         {label}
       </h1>
     );
