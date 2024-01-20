@@ -12,14 +12,16 @@ module.exports = {
         input: "0 0px 2px 0px #0000004a",
       },
       colors: {
-        background: "##f5f5f5",
+        background: "#f5f5f5",
         primary: "#fff",
         secondary: "#30ac68",
         text: "#141414",
+        textSecondary: "#212121",
         borderPrimary: "rgba(0, 0, 0, 0.1)",
       },
       backgroundImage: {
         banner: "url(./assets/images/Banner.jpg)",
+        firstSection: "url(./assets/images/FirstSection.jpg)",
       },
     },
     textShadow: {
