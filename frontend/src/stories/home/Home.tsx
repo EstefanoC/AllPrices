@@ -1,6 +1,10 @@
 // React
 import React from "react";
 
+// Dependencies
+import { EffectCreative } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 // Component
 import { Title } from "../title/Title";
 import Steps from "Components/Home/Steps";
@@ -8,6 +12,10 @@ import { Header } from "../header/Header";
 import { Footer } from "../footer/Footer";
 import { Input } from "stories/input/Input";
 import { Button } from "stories/button/Button";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-creative";
 
 export const Home: React.FC = () => (
   <div className="w-full bg-background">
@@ -107,6 +115,35 @@ export const Home: React.FC = () => (
             <Button label="Just Search" size="large" className="w-fit" onClick={() => console.log("click to search")} />
           </div>
         </div>
+      </section>
+
+      {/* Fourth Section */}
+      <section className=" flex flex-col gap-6 my-12">
+        <Swiper
+          grabCursor={true}
+          effect={"creative"}
+          creativeEffect={{
+            prev: {
+              shadow: true,
+              translate: [0, 0, -400],
+            },
+            next: {
+              translate: ["100%", 0, 0],
+            },
+          }}
+          modules={[EffectCreative]}
+          className="p-6 w-[500px] h-[500px] [&>*]:flex [&>*]:items-center [&>*]:content-center [&>*:nth-child(odd)]:bg-green [&>*]:bg-red [&>*]:text-center"
+        >
+          <SwiperSlide>Slide 1</SwiperSlide>
+          <SwiperSlide>Slide 2</SwiperSlide>
+          <SwiperSlide>Slide 3</SwiperSlide>
+          <SwiperSlide>Slide 4</SwiperSlide>
+          <SwiperSlide>Slide 5</SwiperSlide>
+          <SwiperSlide>Slide 6</SwiperSlide>
+          <SwiperSlide>Slide 7</SwiperSlide>
+          <SwiperSlide>Slide 8</SwiperSlide>
+          <SwiperSlide>Slide 9</SwiperSlide>
+        </Swiper>
       </section>
     </main>
 
