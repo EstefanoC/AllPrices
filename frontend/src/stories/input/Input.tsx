@@ -5,7 +5,7 @@ interface InputProps {
   primary?: boolean;
   name?: string;
   className?: string;
-  type?: "search" | "text" | "number";
+  type?: "search" | "text" | "number" | "email";
   placeholder: string;
   onClick?: () => void;
 }

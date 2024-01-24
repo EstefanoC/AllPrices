@@ -22,6 +22,7 @@ module.exports = {
       backgroundImage: {
         banner: "url(./assets/images/Banner.jpg)",
         firstSection: "url(./assets/images/FirstSection.jpg)",
+        fifthSection: "url(./assets/images/Email.jpg)",
       },
     },
     textShadow: {
@@ -37,7 +38,7 @@ module.exports = {
             textShadow: value,
           }),
         },
-        { values: theme("textShadow") }
+        { values: theme("textShadow") },
       );
     }),
   ],
