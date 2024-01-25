@@ -21,6 +21,7 @@ module.exports = {
       },
       backgroundImage: {
         banner: "url(./assets/images/Banner.jpg)",
+        AboutUs: "url(./assets/images/AboutUs2.jpg)",
         firstSection: "url(./assets/images/FirstSection.jpg)",
         fifthSection: "url(./assets/images/Email.jpg)",
       },

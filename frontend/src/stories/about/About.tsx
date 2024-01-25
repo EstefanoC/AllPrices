@@ -3,28 +3,25 @@ import React from "react";
 
 // Component
 import News from "Components/Home/News";
-import Steps from "Components/Home/Steps";
 import { Header } from "../header/Header";
 import { Footer } from "../footer/Footer";
-import Banner from "Components/Home/Banner";
 import Quotes from "Components/Home/Quotes";
-import Decision from "Components/Home/Decision";
+import Welcome from "Components/AboutUs/Welcome";
+import Mission from "Components/AboutUs/Mission";
 
-export const Home: React.FC = () => (
+export const About: React.FC = () => (
   <div className="w-full bg-background">
     {/* Header */}
-    <Header path="/" onCompare={() => console.log("click Compare")} />
+    <Header path="/about" onCompare={() => console.log("click Compare")} />
 
     {/* Main Content */}
     <main className="container">
       {/* First Section */}
-      <Banner />
-
+      <Welcome />
       {/* Second Section */}
-      <Steps />
+      <Mission />
 
       {/* Thirty Section */}
-      <Decision />
 
       {/* Fourth Section */}
       <Quotes />
