@@ -10,6 +10,7 @@ module.exports = {
         header: "0 5px 0 -5px #0000004a",
         button: "0 0px 15px 0px #0000004a",
         input: "0 0px 2px 0px #0000004a",
+        card: "0 0px 0px 0px #0000004a",
       },
       colors: {
         background: "#f5f5f5",
@@ -29,6 +30,23 @@ module.exports = {
     textShadow: {
       title: "0px 0px 5px #141414",
       p: "1px 1px 1px #141414",
+    },
+    animation: {
+      "move-x": "MoveX 5s ease infinite",
+      showCard: "Show 5s ease 1",
+    },
+    keyframes: {
+      MoveX: {
+        "0%": { transform: "translateX(0)" },
+        "50%": { transform: "translateX(30%)" },
+        "100%": { transform: "translateX(0)" },
+      },
+      spin: {
+        "100%": { transform: "rotate(360deg)" },
+      },
+      pulse: {
+        "50%": { opacity: "0.5" },
+      },
     },
   },
   plugins: [

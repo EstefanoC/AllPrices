@@ -22,11 +22,9 @@ export const About: React.FC = () => (
       <Mission />
 
       {/* Thirty Section */}
-
-      {/* Fourth Section */}
       <Quotes />
 
-      {/* Fifth Section */}
+      {/* Fourth Section */}
       <News />
     </main>
 
