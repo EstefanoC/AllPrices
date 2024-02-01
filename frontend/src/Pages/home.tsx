@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import { getMain } from "../Utils/Getter";
+import Info from "../Components/Contact/Info.jsx";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -16,7 +17,10 @@ const Home = () => {
   return (
     <>
       <Header />
-      <main className="flex bg-red-800">return Home</main>
+      <main className="flex bg-red-800">
+        return Home
+        <Info />
+      </main>
       <Footer />
     </>
   );
