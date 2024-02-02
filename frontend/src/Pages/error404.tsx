@@ -1,17 +1,8 @@
 import React from "react";
 
 // Components
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+import { Error404 as Error404Stories } from "stories/error404/Error404";
 
-const Error404 = () => {
-  return (
-    <>
-      <Header />
-      <main className="bg-yellow-700">Error404</main>
-      <Footer />
-    </>
-  );
-};
+const Error404 = () => <Error404Stories />;
 
 export default Error404;

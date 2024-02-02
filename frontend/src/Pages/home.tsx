@@ -1,29 +1,21 @@
-import React, { useEffect, useState } from "react";
+// React
+import React, { useEffect } from "react";
 
 // Components
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
 import { getMain } from "../Utils/Getter";
-import Info from "../Components/Contact/Info.jsx";
+// import Info from "../Components/Contact/Info.jsx";
+// import HomeStories from "../stories/home/home";
+import { Home as HomeStories } from "../stories/home/Home";
 
 const Home = () => {
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
 
   // Call the products
   useEffect(() => {
     getMain();
   }, []);
 
-  return (
-    <>
-      <Header />
-      <main className="flex bg-red-800">
-        return Home
-        <Info />
-      </main>
-      <Footer />
-    </>
-  );
+  return <HomeStories />;
 };
 
 export default Home;

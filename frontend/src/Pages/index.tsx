@@ -6,7 +6,8 @@ import { Routes, Route } from "react-router-dom";
 
 // Components
 import Home from "./home";
-import Store from "./store";
+import About from "./about";
+import Contact from "./contact";
 import Error404 from "./error404";
 
 // Styles Toastify
@@ -17,8 +18,8 @@ const App = () => (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="*" element={<Error404 />} />
-      <Route path="about" element={<Store />} />
-      <Route path="contact" element={<Store />} />
+      <Route path="about" element={<About />} />
+      <Route path="contact" element={<Contact />} />
     </Routes>
     <ToastContainer />
   </>

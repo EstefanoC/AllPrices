@@ -16,7 +16,7 @@ export const Home: React.FC = () => (
     <Header path="/" onCompare={() => console.log("click Compare")} />
 
     {/* Main Content */}
-    <main className="container">
+    <main className="w-full">
       {/* First Section */}
       <Banner />
 

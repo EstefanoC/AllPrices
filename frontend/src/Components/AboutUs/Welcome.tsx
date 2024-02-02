@@ -17,7 +17,7 @@ import { BsFillFastForwardFill } from "react-icons/bs";
 const Banner = require("../../assets/images/AboutUs.jpg");
 
 const Welcome = () => (
-  <section className="mx-5 my-10 flex flex-col items-center justify-between gap-6">
+  <section className="container mx-auto my-10 flex flex-col items-center justify-between gap-6">
     {/* Header */}
     <header className="flex w-full items-center justify-between gap-6">
       <div className="flex w-full flex-col gap-2">
@@ -87,9 +87,9 @@ const Welcome = () => (
       </div>
 
       <div className="relative h-full w-3/5">
-        <div className="bg-AboutUs absolute -left-28 -top-10 h-48 w-48 overflow-hidden rounded-3xl bg-cover bg-no-repeat p-2">
+        <div className="absolute -left-28 -top-10 h-48 w-48 overflow-hidden rounded-3xl bg-AboutUs bg-cover bg-no-repeat p-2">
           <div className="flex h-full w-full flex-col items-start justify-center rounded-3xl bg-background p-4">
-            <div className="bg-AboutUs flex bg-cover bg-clip-text bg-no-repeat">
+            <div className="flex bg-AboutUs bg-cover bg-clip-text bg-no-repeat">
               <span className="text-7xl text-transparent">10+</span>
             </div>
 

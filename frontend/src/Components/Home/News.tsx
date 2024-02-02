@@ -7,26 +7,26 @@ import { Input } from "stories/input/Input";
 import { Button } from "stories/button/Button";
 
 const News = () => (
-  <section className="relative flex flex-col justify-center overflow-hidden drop-shadow-md items-center py-10 gap-2 min-h-96 mt-24">
-    <div className="absolute top-0 left-0 w-full h-full bg-secondary/70 z-10" />
-    <div className="absolute top-0 left-0 w-full h-full bg-fifthSection bg-no-repeat bg-center bg-cover z-0" />
+  <section className="relative mt-24 flex min-h-96 w-full flex-col items-center justify-center gap-2 overflow-hidden py-10 drop-shadow-md">
+    <div className="absolute left-0 top-0 z-10 h-full w-full bg-secondary/70" />
+    <div className="absolute left-0 top-0 z-0 h-full w-full bg-fifthSection bg-cover bg-center bg-no-repeat" />
 
-    <div className="flex flex-col items-center justify-center h-full w-full gap-6 z-10">
+    <div className="z-10 flex h-full w-full flex-col items-center justify-center gap-6">
       {/* Title H2 */}
       <Title
         primary={false}
         label="Get all news of PriceAll"
-        className="drop-shadow-2xl !text-primary"
+        className="!text-primary drop-shadow-2xl"
       />
 
       {/* Input Email */}
-      <div className="bg-primary p-1 rounded-3xl flex gap-0 max-w-lg w-full">
-        <label className="w-full h-full d-block">
+      <div className="flex w-full max-w-lg gap-0 rounded-3xl bg-primary p-1">
+        <label className="d-block h-full w-full">
           <Input
             placeholder="Put your Email"
             name="email"
             type="email"
-            className="!border-none !shadow-none w-full"
+            className="w-full !border-none !shadow-none"
           />
         </label>
         <Button

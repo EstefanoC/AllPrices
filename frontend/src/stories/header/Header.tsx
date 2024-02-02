@@ -16,22 +16,28 @@ interface HeaderProps {
 }
 
 export const Header = ({ path = "/", onCompare }: HeaderProps) => (
-  <header className="bg-primary container">
-    <div className="flex px-5 py-4 items-center justify-between storybook-header">
+  <header className="w-full bg-primary">
+    <div className="storybook-header container mx-auto flex items-center justify-between px-5 py-4">
       {/* Logo */}
-      <div className="flex gap-2 items-center">
-        <img src={Logo} className="size-8 inline-block" alt="Logo of PriceAll" />
-        <h1 className="font-bold my-2 inline-block">All Prices</h1>
+      <div className="flex items-center gap-2">
+        <img
+          src={Logo}
+          className="inline-block size-8"
+          alt="Logo of PriceAll"
+        />
+        <h1 className="my-2 inline-block font-bold">All Prices</h1>
       </div>
 
       {/* Nav */}
-      <nav className="flex max-w-80 w-full">
-        <ul className="list-none flex items-center justify-between gap-5 w-full">
+      <nav className="flex w-full max-w-80">
+        <ul className="flex w-full list-none items-center justify-between gap-5">
           {Nav.map(({ id, label, url }) => (
             <li
               key={id}
-              className={`px-3 text-base font-medium border-b transition-all hover:border-secondary hover:scale-105 ${
-                url === path ? "border-b border-secondary scale-105" : "border-transparent"
+              className={`border-b px-3 text-base font-medium transition-all hover:scale-105 hover:border-secondary ${
+                url === path
+                  ? "scale-105 border-b border-secondary"
+                  : "border-transparent"
               }`}
             >
               <Link to={url}>{label}</Link>

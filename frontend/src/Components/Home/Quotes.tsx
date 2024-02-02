@@ -90,8 +90,8 @@ const QuotesTab: QuotesHome[] = [
 ];
 
 const Quotes = () => (
-  <section className="flex flex-col gap-6 my-28">
-    <div className="flex flex-col items-center gap-6 ml-10 my-10">
+  <section className="container mx-auto my-28 flex flex-col gap-6">
+    <div className="my-10 ml-10 flex flex-col items-center gap-6">
       {/* Title H2 */}
       <Title
         primary={false}
@@ -116,7 +116,7 @@ const Quotes = () => (
       effect={"creative"}
       pagination={{ clickable: true }}
       modules={[EffectCreative, Autoplay, Navigation, Pagination]}
-      className="!p-6 w-full h-full !overflow-visible [&_[class*='swiper-button']]:text-secondary [&_[class*='swiper-pagination']>span]:bg-secondary"
+      className="h-full w-full !overflow-visible !p-6 [&_[class*='swiper-button']]:text-secondary [&_[class*='swiper-pagination']>span]:bg-secondary"
       creativeEffect={{
         prev: {
           translate: [0, 0, -400],
@@ -128,22 +128,22 @@ const Quotes = () => (
     >
       {QuotesTab.map(({ id, name, location, content, image }) => (
         <SwiperSlide key={id} className="p-4">
-          <div className="drop-shadow-sm rounded-3xl border-borderPrimary border bg-primary overflow-hidden pr-0">
-            <blockquote className="flex gap-4 items-center justify-center w-full h-full min-h-40 max-h-72">
-              <div className="flex flex-col w-3/5 h-full min-h-40 content-between p-6 pr-0">
-                <FaQuoteLeft className="text-text/30 text-4xl" />
-                <p className="text-base text-text after:content-['”'] after:text-4xl after:leading-3 after:top-3 after:relative after:text-text/30 my-6">
+          <div className="overflow-hidden rounded-3xl border border-borderPrimary bg-primary pr-0 drop-shadow-sm">
+            <blockquote className="flex h-full max-h-72 min-h-40 w-full items-center justify-center gap-4">
+              <div className="flex h-full min-h-40 w-3/5 flex-col content-between p-6 pr-0">
+                <FaQuoteLeft className="text-4xl text-text/30" />
+                <p className="my-6 text-base text-text after:relative after:top-3 after:text-4xl after:leading-3 after:text-text/30 after:content-['”']">
                   {content}
                 </p>
 
-                <strong className="text-lg text-text mt-6">{name}</strong>
+                <strong className="mt-6 text-lg text-text">{name}</strong>
                 <p className="text-sm text-text/80">{location}</p>
               </div>
 
               <img
                 src={image}
                 alt={name}
-                className="relative w-2/5 object-cover h-full min-h-72 select-none"
+                className="relative h-full min-h-72 w-2/5 select-none object-cover"
               />
             </blockquote>
           </div>

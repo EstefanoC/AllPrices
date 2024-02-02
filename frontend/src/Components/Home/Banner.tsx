@@ -7,7 +7,7 @@ import { Input } from "stories/input/Input";
 import { Button } from "stories/button/Button";
 
 const Banner = () => (
-  <section className="mx-5 flex h-[50vh] min-h-[600px] flex-col items-center gap-12 overflow-hidden rounded-3xl bg-banner bg-cover bg-center bg-no-repeat p-8 shadow-xl">
+  <section className="container mx-auto flex h-[50vh] min-h-[600px] flex-col items-center gap-12 overflow-hidden rounded-3xl bg-banner bg-cover bg-center bg-no-repeat p-8 shadow-xl">
     {/* Title H1 */}
     <Title
       label="Save your Money"

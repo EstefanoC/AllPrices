@@ -63,12 +63,12 @@ const MissionTab: MissionType[] = [
 ];
 
 const Mission = () => (
-  <section className="mx-5 mb-6 mt-24 flex items-center justify-between gap-6">
+  <section className="container mx-auto mb-6 mt-24 flex items-center justify-between gap-6">
     {/* Left Content */}
     <div className="grid w-3/5 grid-cols-2 grid-rows-2 gap-4">
       {MissionTab.map(({ id, title, content, Icon, image }) => (
         <article
-          className="shadow-card relative flex max-h-72 min-h-72 w-full items-end justify-end rounded-2xl [&:hover>div:first-child]:-translate-y-12 [&:hover>div:last-child>div]:translate-y-0"
+          className="relative flex max-h-72 min-h-72 w-full items-end justify-end rounded-2xl shadow-card [&:hover>div:first-child]:-translate-y-12 [&:hover>div:last-child>div]:translate-y-0"
           key={id}
         >
           <div className="absolute right-2 top-0 h-12 w-min translate-y-3 rounded-t-2xl bg-white p-2 transition-all duration-1000">
@@ -115,7 +115,7 @@ const Mission = () => (
         partner dedicated to your financial success.
       </p>
 
-      <p className="animate-move-x mt-6 inline-flex items-center self-start">
+      <p className="mt-6 inline-flex animate-move-x items-center self-start">
         <IoIosArrowBack className="text-4xl text-secondary" />
         <span className="text-base text-secondary">Look who we help</span>
       </p>

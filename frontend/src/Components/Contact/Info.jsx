@@ -22,7 +22,7 @@ const Info = () => {
   };
 
   return (
-    <section className="mx-5 my-10 flex flex-col items-center justify-between gap-6">
+    <section className="container mx-auto my-10 flex flex-col items-center justify-between gap-6">
       {/* Header */}
       <header className="flex w-full items-center justify-between gap-6">
         <div className="flex w-full flex-col gap-2">

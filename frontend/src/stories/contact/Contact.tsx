@@ -15,7 +15,7 @@ export const Contact: React.FC = () => (
     <Header path="/about" onCompare={() => console.log("click Compare")} />
 
     {/* Main Content */}
-    <main className="container">
+    <main className="w-full">
       {/* First Section */}
       <Info />
 
